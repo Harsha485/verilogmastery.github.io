@@ -1,30 +1,26 @@
-# Lesson 2: Combinational vs. Sequential Logic
+# Lesson 2: Sequential Logic & The D-Flip Flop 🔄
 
-In Verilog, there are two ways to describe how hardware behaves.
+In Lesson 1, we learned about **Combinational Logic** (logic that changes instantly). Now, we enter the world of **Sequential Logic**, where things happen only when a "Clock" signal tells them to.
 
-### 1. Combinational Logic
-Think of this like a simple light switch. When you flip the switch, the light turns on immediately. 
-* **Verilog Keyword:** `assign`
-* **Example:** The AND gate from Lesson 1.
+### What is a Clock?
+A clock is a signal that oscillates between `0` and `1` at a regular interval. In Verilog, we usually look for the **Positive Edge** (the exact moment the signal jumps from 0 to 1).
 
-### 2. Sequential Logic
-This is logic that "remembers" things. It only changes when a **Clock (CLK)** signal tells it to.
-* **Verilog Keyword:** `always @(posedge clk)`
-* **Example:** A D-Flip Flop (the basic unit of memory).
+### The D-Flip Flop (DFF)
+The DFF is the most basic memory element. It "captures" the value of the input **D** and moves it to the output **Q** only when the clock ticks.
 
 
 
-### The Code: D-Flip Flop
+### The Code:
 ```verilog
 module d_flip_flop (
-    input wire clk,
-    input wire d,
-    output reg q
+    input wire clk, // Clock signal
+    input wire d,   // Data input
+    output reg q    // Data output (reg is used for sequential logic)
 );
 
-    // This block triggers every time the clock goes from 0 to 1
+    // This block triggers ONLY at the positive edge of the clock
     always @(posedge clk) begin
-        q <= d; // Non-blocking assignment
+        q <= d; // We use <= (non-blocking) for sequential logic
     end
 
 endmodule
