@@ -12,3 +12,13 @@ module hello_world(
 );
     // Your logic goes here
 endmodule
+### 💻 Practice Lab: Try it Yourself!
+Use the interactive simulator below to test the code.
+
+<iframe 
+  src="https://www.edaplayground.com/x/5pG?embed=true" 
+  width="100%" 
+  height="500px" 
+  frameborder="0" 
+  style="border:1px solid #ddd; border-radius: 8px;">
+</iframe>
