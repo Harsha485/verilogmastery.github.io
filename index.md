@@ -16,7 +16,7 @@ endmodule
 Use the interactive simulator below to test the code.
 
 <iframe 
-  src="https://www.edaplayground.com/x/5pG?embed=true" 
+  src="https://www.edaplayground.com/x/Ab3g?embed=true" 
   width="100%" 
   height="500px" 
   frameborder="0" 
