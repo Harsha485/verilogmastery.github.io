@@ -1,26 +1,26 @@
 # Lesson 2: Sequential Logic & The D-Flip Flop 🔄
 
-In Lesson 1, we learned about **Combinational Logic** (logic that changes instantly). Now, we enter the world of **Sequential Logic**, where things happen only when a "Clock" signal tells them to.
+In Lesson 1, we learned about **Combinational Logic**. Now, we enter the world of **Sequential Logic**, where things happen based on a "Clock" signal.
 
 ### What is a Clock?
-A clock is a signal that oscillates between `0` and `1` at a regular interval. In Verilog, we usually look for the **Positive Edge** (the exact moment the signal jumps from 0 to 1).
+A clock is the "heartbeat" of digital systems. It tells the hardware exactly when to update its values.
 
 ### The D-Flip Flop (DFF)
-The DFF is the most basic memory element. It "captures" the value of the input **D** and moves it to the output **Q** only when the clock ticks.
+A DFF captures the value of input **D** only when the clock rises (Positive Edge).
 
 
 
-### The Code:
+### The Verilog Code:
 ```verilog
 module d_flip_flop (
-    input wire clk, // Clock signal
-    input wire d,   // Data input
-    output reg q    // Data output (reg is used for sequential logic)
+    input wire clk, 
+    input wire d,   
+    output reg q    
 );
 
-    // This block triggers ONLY at the positive edge of the clock
+    // This triggers ONLY at the positive edge of the clock
     always @(posedge clk) begin
-        q <= d; // We use <= (non-blocking) for sequential logic
+        q <= d; // Use non-blocking (<=) for sequential logic
     end
 
 endmodule
