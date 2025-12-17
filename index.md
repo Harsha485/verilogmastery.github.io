@@ -15,10 +15,15 @@ endmodule
 ### 💻 Practice Lab: Try it Yourself!
 Use the interactive simulator below to test the code.
 
+## 💻 Practice Lab: Try it Yourself!
+Use the interactive simulator below to test the code for our AND gate.
+
 <iframe 
   src="https://www.edaplayground.com/x/Ab3g?embed=true" 
   width="100%" 
-  height="500px" 
+  height="600px" 
   frameborder="0" 
   style="border:1px solid #ddd; border-radius: 8px;">
 </iframe>
+
+[🚀 Open Simulator in New Tab](https://www.edaplayground.com/x/Ab3g)
